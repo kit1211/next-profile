@@ -1,0 +1,17 @@
+{
+  
+  "sidebar": {
+    "li_1": "Source Code",
+    "li_2": "Support"
+  },
+  "page": {
+    "dashboard": {
+      "title": "Source Code",
+      "greeting": "Hello, welcome back!"
+    },
+    "supporter": {
+      "title": "Supporter"
+    }
+  }
+}
+

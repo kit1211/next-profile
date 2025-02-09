@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "bun next dev --turbopack",
+    "build": "bun next build",
+    "start": "bun next start",
+    "lint": "bun next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@types/react-world-flags": "^1.6.0",
+    "autoprefixer": "^10.4.20",
+    "next": "15.1.6",
+    "next-intl": "^3.26.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.6"
+    "react-icons": "^5.4.0",
+    "react-world-flags": "^1.6.0"
   },
   "devDependencies": {
     "typescript": "^5",

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('/fonts/consolas.ttf') format('truetype'),
+    url('/fonts/CanvaSans-Regular.woff2') format('woff2'),
+    url('/fonts/CanvaSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+}
+
+.font-consola {
+  font-family: Consolas, Monaco, monospace !important;
+}
+
+/* ✅ ใช้ฟอนต์ IBM Plex Thai */
+.font-ibm-plex-thai {
+  font-family: var(--font-ibm-plex-thai), sans-serif !important;
+}
