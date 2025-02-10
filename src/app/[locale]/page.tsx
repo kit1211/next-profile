@@ -3,11 +3,13 @@ import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+
 
 export default function Page() {
 
     const t = useTranslations();
-
+    const { locale } = useParams();
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -20,6 +22,7 @@ export default function Page() {
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
+
 
     return (
         <div>
@@ -53,10 +56,10 @@ export default function Page() {
             </div>
 
             {/* Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 mt-4">
                 {/* loop 10x */}
                 {Array.from({ length: 10 }).map((_, index) => (
-                    <Link href="#"  key={index}>
+                    <Link href={`/${locale}/visitors/Ai-ดูดวง-MultiAgents${index}`} key={index}>
                         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md" key={index}>
                             <div className="flex justify-between gap-4 mt-2 mb-2">
                                 <div className="flex items-center gap-2">

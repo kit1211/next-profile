@@ -6,7 +6,7 @@ import { IntlProvider } from "next-intl";
 import { useParams } from "next/navigation"; // ✅ ใช้ useParams() ดึง locale
 import { useEffect, useState } from "react";
 import "./globals.css";
-import { locales  } from "@/app/i18n";
+import { locales } from "@/app/i18n";
 
 
 const ibmPlexThai = IBM_Plex_Sans_Thai({
@@ -51,7 +51,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <IntlProvider locale={params.locale as string} messages={messages}>
                     <div className="flex min-h-screen">
                         <Sidebar darkMode={darkMode} setDarkMode={setDarkMode} />
-                        <main className="flex-1 p-6">{children}</main>
+                        <main className={`flex-1 xl:ml-64 p-6 transition-all duration-300 ${fontClass}`}>
+                            {children}
+                        </main>
                     </div>
                 </IntlProvider>
             </body>
